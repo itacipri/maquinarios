@@ -1,0 +1,135 @@
+.page { padding-bottom: 5rem; }
+
+/* Hero */
+.hero {
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border);
+  padding: 4rem 0 3rem;
+  text-align: center;
+}
+.heroTitle {
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--text-primary);
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+}
+.heroText {
+  max-width: 640px;
+  margin: 0 auto;
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+}
+
+/* Stats */
+.statsBar {
+  background: var(--bg-elevated);
+  border-bottom: 1px solid var(--border);
+  padding: 2rem 0;
+  margin-bottom: 4rem;
+}
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  text-align: center;
+}
+.stat { display: flex; flex-direction: column; gap: 0.25rem; }
+.statValue {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent-orange);
+}
+.statLabel { font-size: 0.82rem; color: var(--text-muted); }
+
+/* Sections */
+.section { margin-bottom: 4rem; }
+.sectionTitle {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+}
+.text {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+/* Mission grid */
+.missionGrid {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 3rem;
+  align-items: start;
+}
+.missionVisual { display: flex; flex-direction: column; gap: 1rem; }
+.missionCard {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent-orange);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.missionYear {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--accent-orange);
+  flex-shrink: 0;
+  min-width: 40px;
+}
+.missionCardText { font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; }
+
+/* Values */
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+.valueCard { padding: 1.5rem; display: flex; flex-direction: column; gap: 0.6rem; }
+.valueIcon {
+  width: 44px;
+  height: 44px;
+  background: var(--accent-orange-light);
+  border: 1px solid rgba(249,115,22,0.2);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-orange);
+}
+.valueName {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.valueDesc { font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; }
+
+/* CTA */
+.cta {
+  text-align: center;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 3.5rem 2rem;
+}
+.ctaTitle { font-size: 1.75rem; color: var(--text-primary); margin-bottom: 0.75rem; }
+.ctaText { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 2rem; }
+.ctaButtons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .missionGrid { grid-template-columns: 1fr; }
+  .valuesGrid { grid-template-columns: repeat(2, 1fr); }
+  .statsGrid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .valuesGrid { grid-template-columns: 1fr; }
+  .statsGrid { grid-template-columns: repeat(2, 1fr); }
+}

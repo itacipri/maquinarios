@@ -1,0 +1,13 @@
+{
+  // Documentação: https://developers.cloudflare.com/workers/wrangler/configuration/
+  "name": "maquinarios-site",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2025-05-07",
+  // nodejs_compat é necessário para o Firebase SDK (gRPC / Node built-ins)
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "placement": { "mode": "smart" }
+}
