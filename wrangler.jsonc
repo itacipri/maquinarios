@@ -9,5 +9,14 @@
     "directory": ".open-next/assets",
     "binding": "ASSETS"
   },
-  "placement": { "mode": "smart" }
+  "placement": { "mode": "smart" },
+  "observability": {
+    "logs": {
+      "enabled": true,
+      "invocation_logs": true
+    },
+    "traces": {
+      "enabled": false
+    }
+  }
 }
