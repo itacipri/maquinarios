@@ -1,6 +1,6 @@
 {
   // Documentação: https://developers.cloudflare.com/workers/wrangler/configuration/
-  "name": "maquinarios-site",
+  "name": "maquinarios",
   "main": ".open-next/worker.js",
   "compatibility_date": "2025-05-07",
   // nodejs_compat é necessário para o Firebase SDK (gRPC / Node built-ins)
