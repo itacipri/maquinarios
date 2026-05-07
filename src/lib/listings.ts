@@ -1,7 +1,7 @@
 import {
   collection, addDoc, updateDoc, deleteDoc,
   getDocs, doc, query, where, orderBy, serverTimestamp,
-} from 'firebase/firestore';
+} from 'firebase/firestore/lite';
 import { db } from './firebase';
 import { Listing, ListingFilters } from '@/types';
 import { mockListings, mockCategories } from '@/data/mock';

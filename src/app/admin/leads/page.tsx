@@ -1,6 +1,6 @@
 'use client';
 import { useEffect, useState } from 'react';
-import { collection, getDocs, query, orderBy, Timestamp } from 'firebase/firestore';
+import { collection, getDocs, query, orderBy, Timestamp } from 'firebase/firestore/lite';
 import { db } from '@/lib/firebase';
 import { Loader } from 'lucide-react';
 import styles from './page.module.css';

@@ -1,5 +1,5 @@
 import { initializeApp, getApps } from 'firebase/app';
-import { initializeFirestore } from 'firebase/firestore';
+import { initializeFirestore } from 'firebase/firestore/lite';
 import { getAuth } from 'firebase/auth';
 import { getStorage } from 'firebase/storage';
 
@@ -14,8 +14,7 @@ const firebaseConfig = {
 
 const app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApps()[0];
 
-// experimentalForceLongPolling substitui gRPC por HTTP — necessário para Cloudflare Workers
-export const db = initializeFirestore(app, { experimentalForceLongPolling: true });
+export const db = initializeFirestore(app, {});
 export const auth = getAuth(app);
 export const storage = getStorage(app);
 export default app;
